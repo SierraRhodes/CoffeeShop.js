@@ -11,7 +11,7 @@ function Header(){
   return (
     <React.Fragment>
       <div style={myStyledComponentStyles}>
-    <h1>Coffee Shop</h1>
+    <h1> Belle's Coffee Shop</h1>
     </div>
     </React.Fragment>
   );
