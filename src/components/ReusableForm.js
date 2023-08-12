@@ -7,7 +7,7 @@ function AddSackForm(props){
   return (
     <React.Fragment>
      <ReusableForm formSubmissionHandler={handleNewCoffeeItemFormSubmission}
-     buttonText="Add Coffee" />
+     buttonText="Add" />
     </React.Fragment>
   );
   function handleNewCoffeeItemFormSubmission(event) {

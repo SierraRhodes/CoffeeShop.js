@@ -1,14 +1,17 @@
 import React from 'react';
 import AddSackForm from './AddSackForm';
 import CoffeeList from './CoffeeList';
+import CoffeeDetails from './CoffeeDetails';
 
 class StoreManagement extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
-      
+      formVisibleOnPage: false,
+      mainCoffeeList: [],
+      selectedcoffeeItem: null
+
     };
   }
 
@@ -18,18 +21,32 @@ class StoreManagement extends React.Component {
     }));
   }
 
+  handleAddingNewCoffeeItemToList = (newCoffeeItem) => {
+    console.log("Adding new coffee item:", newCoffeeItem);
+  const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffeeItem);
+  console.log("New main coffee list:", newMainCoffeeList);
+  this.setState({
+    mainCoffeeList: newMainCoffeeList,
+    formVisibleOnPage: false
+  });
+  }
+
+  handleChangingSelectedCoffeeItem = (id) => {
+    const selectedCoffeeItem = this.state.mainCoffeeList.filter(coffeeItem => coffeeItem.id === id)[0];
+    this.setState({selectedCoffeeItem: selectedCoffeeItem});
+  } 
+
   render(){
     let currentlyVisibleState = null;
-    let addCoffeeButton = null;
     let buttonText = null;
 
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <AddSackForm />
+      currentlyVisibleState = <AddSackForm onNewCoffeeItemCreation={this.handleAddingNewCoffeeItemToList} />
       buttonText = "Return to Menu";
     } else {
-      currentlyVisibleState = <CoffeeList />
-      addCoffeeButton = <button onClick={this.handleClick}>Add Coffee</button>
+      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList} />
       buttonText = "Add Coffee";
+
     }
     return (
       <React.Fragment>
