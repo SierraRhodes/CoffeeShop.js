@@ -19,6 +19,7 @@ _This is a simple react app that allows the user to view, create, update, and de
 ## Setup/Installation Requirements
 
 * _clone the repository: git clone <http of project>_
+* _Install all Node packages and dependencies with the command npm install._
 * _inside of your terminal run: npm run build_
 * _inside of your terminal run: npm run start_
 * _When the web app successfully loads, you are good to go!_

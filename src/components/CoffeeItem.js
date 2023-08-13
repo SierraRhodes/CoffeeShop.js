@@ -28,6 +28,7 @@ CoffeeItem.propTypes = {
   name: PropTypes.string,
   price: PropTypes.string,
   roast: PropTypes.string,
+  sackCount: PropTypes.number, 
   whenCoffeeItemClicked: PropTypes.func
 };
 
