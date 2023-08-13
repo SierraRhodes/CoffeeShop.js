@@ -1,30 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { v4 } from 'uuid';
-import ReusableForm from "./ReusableForm";
 
-function AddSackForm(props){
+function ReusableForm(props) {
   return (
     <React.Fragment>
-     <ReusableForm formSubmissionHandler={handleNewCoffeeItemFormSubmission}
-     buttonText="Add" />
+      <form onSubmit={props.formSubmissionHandler}>
+        <input
+          type='text'
+          name='origin'
+          placeholder='Place' />
+        <input
+          type='text'
+          name='name'
+          placeholder='Name' />
+        <input
+          type = 'text'
+          name='price'
+          placeholder='Price' />
+        <input
+          type = 'text'
+          name='roast'
+          placeholder='Light, Medium, Dark' />
+      
+        <button type='submit'>{props.buttonText}</button>
+      </form>
     </React.Fragment>
   );
-  function handleNewCoffeeItemFormSubmission(event) {
-    event.preventDefault();
-    props.onNewTicketCreation({
-      origin: event.target.origin.value,
-      name: event.target.name.value,
-      price: event.target.price.value,
-      roast: event.target.roast.value,
-      id: v4()
-    });
-  
-  }
 }
 
-AddSackForm.propTypes = {
-  onNewCoffeeItemCreation: PropTypes.func
+ReusableForm.propTypes = {
+  formSubmissionHandler: PropTypes.func,
+  buttonText: PropTypes.string
 };
 
-export default AddSackForm;
+export default ReusableForm;

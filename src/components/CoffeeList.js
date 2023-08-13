@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function CoffeeList(props){
   return (
     <React.Fragment>
-      {props.coffeeList.map((coffeeItem) => // Loop through the list passed down from StoreManagement
+      {props.coffeeList.map((coffeeItem) => 
         <CoffeeItem whenCoffeeItemClicked = { props.onCoffeeItemSelection }
           origin={coffeeItem.origin}
           name={coffeeItem.name}
@@ -24,7 +24,4 @@ CoffeeList.propTypes = {
   onCoffeeItemSelection: PropTypes.func
 };
 
-CoffeeList.defaultProps = {
-  coffeeList: []
-};
 export default CoffeeList;

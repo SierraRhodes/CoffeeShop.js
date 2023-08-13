@@ -12,7 +12,7 @@ function AddSackForm(props){
   );
   function handleNewCoffeeItemFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({
+    props.onNewCoffeeItemCreation({
       origin: event.target.origin.value,
       name: event.target.name.value,
       price: event.target.price.value,
