@@ -90,7 +90,6 @@ class StoreManagement extends React.Component {
       <React.Fragment>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
-        <button>hmm</button>
       </React.Fragment>
     );
   }
