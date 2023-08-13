@@ -8,11 +8,12 @@ function CoffeeList(props){
       {props.coffeeList.map((coffeeItem) => 
         <CoffeeItem 
           whenCoffeeItemClicked = { props.onCoffeeItemSelection }
+          // onSellCoffee={props.onSellCoffee}
           origin={coffeeItem.origin}
           name={coffeeItem.name}
           price={coffeeItem.price}
           roast={coffeeItem.roast}
-          sackCount={coffeeItem.sackCount} 
+          quantity={coffeeItem.quantity} 
           id={coffeeItem.id}
           key={coffeeItem.id} />
       )}
@@ -23,7 +24,8 @@ function CoffeeList(props){
 
 CoffeeList.propTypes = {
   coffeeList: PropTypes.array,
-  onCoffeeItemSelection: PropTypes.func
+  onCoffeeItemSelection: PropTypes.func,
+  
 };
 
 export default CoffeeList;

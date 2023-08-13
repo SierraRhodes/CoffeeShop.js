@@ -34,6 +34,8 @@ class StoreManagement extends React.Component {
   }
 
   handleAddingNewCoffeeItemToList = (newCoffeeItem) => {
+  newCoffeeItem.quantity = 130;
+
   const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffeeItem);
   this.setState({
     mainCoffeeList: newMainCoffeeList,
@@ -69,6 +71,12 @@ class StoreManagement extends React.Component {
     });
   }
 
+  handleBuyingCoffee = (coffeeItem) => {
+    coffeeItem.quantity-= 1;
+    this.setState({
+      selectedCoffeeItem: coffeeItem
+    });
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -77,7 +85,10 @@ class StoreManagement extends React.Component {
       currentlyVisibleState = <EditAddSackForm coffeeItem = {this.state.selectedCoffeeItem} onEditCoffeeItem = {this.handleEditingCoffeeItemInList}/>
       buttonText= "Return to Coffee List";
     } else if (this.state.selectedCoffeeItem != null) {
-      currentlyVisibleState = <CoffeeDetails coffeeItem= {this.state.selectedCoffeeItem} onClickingDelete = {this.handleDeletingCoffeeItem} onClickingEdit = {this.handleEditClick} />
+      currentlyVisibleState = <CoffeeDetails coffeeItem= {this.state.selectedCoffeeItem} 
+      onClickingDelete = {this.handleDeletingCoffeeItem} 
+      onClickingEdit = {this.handleEditClick} 
+      onClickingSell ={this.handleBuyingCoffee}/>
       buttonText = "Return to Coffee List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <AddSackForm onNewCoffeeItemCreation={this.handleAddingNewCoffeeItemToList} />;
@@ -90,6 +101,7 @@ class StoreManagement extends React.Component {
       <React.Fragment>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
+        <button onClick={this.handleBuyingCoffee}>Sell Coffee</button>
       </React.Fragment>
     );
   }
