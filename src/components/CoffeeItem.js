@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 function CoffeeItem(props){
-    const [sackCount, setSackCount] = useState(50);
+    const [sackCount, setSackCount] = useState(130);
   
     const coffeeSack = () => {
       if (sackCount > 0) {
         setSackCount(sackCount - 1);
+
       }
     };
   return (
@@ -17,7 +18,7 @@ function CoffeeItem(props){
       <h3>Inventory:{sackCount}</h3>
       <hr/>
       </div>
-      <button onClick={coffeeSack} disabled={sackCount === 0}>Remove Sack</button>
+      <button onClick={coffeeSack} disabled={sackCount === 0}>Sell Coffee</button>
     </React.Fragment>
   );
 }

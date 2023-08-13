@@ -84,7 +84,7 @@ class StoreManagement extends React.Component {
       buttonText = "Return to Coffee List";
     } else {
       currentlyVisibleState  = <CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeItemSelection={this.handleChangingSelectedCoffeeItem}/>;
-      buttonText = "Add Coffee";
+      buttonText = "Add New Coffee";
     }
     return (
       <React.Fragment>
