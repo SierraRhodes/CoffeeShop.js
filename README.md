@@ -1,3 +1,55 @@
+# _Belle's Coffee Shop_
+
+#### By _**Sierra Rhodes
+
+#### This simple web application made with react that allows the user full CRUD (Create, Read, Update, Delete) functionality when creating their own coffee sack. 
+
+## Technologies Used
+
+* _React_
+* _HTML_
+* _CSS_
+* _JavaScript_
+
+
+## Description
+
+_This is a simple react app that allows the user to view, create, update, and delete a coffee sack that they made while also allowing them to sell a sack, affecting the inventory count._
+
+## Setup/Installation Requirements
+
+* _clone the repository: git clone <http of project>_
+* _inside of your terminal run: npm run build_
+* _inside of your terminal run: npm run start_
+* _When the web app successfully loads, you are good to go!_
+
+## Known Bugs
+
+* _None_
+
+
+## License
+
+Copyright 2023 Sierra Rhodes
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
