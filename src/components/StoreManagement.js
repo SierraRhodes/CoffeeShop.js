@@ -4,6 +4,12 @@ import CoffeeList from './CoffeeList';
 import CoffeeDetails from './CoffeeDetails';
 import EditAddSackForm from './EditAddSackForm';
 
+const buttonStyle = {
+  display: "flex",  
+  marginTop: "15px",
+  marginLeft: "640px",
+  "!important": true 
+};
 
 class StoreManagement extends React.Component {
 
@@ -79,7 +85,7 @@ class StoreManagement extends React.Component {
       });
     }
   };
-  
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -103,7 +109,7 @@ class StoreManagement extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button style={buttonStyle} onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

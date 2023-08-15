@@ -2,16 +2,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Form, Button } from "react-bootstrap";
 
+const formStyle = {
+  display: "flex",
+  flexDirection: "column",
+  fontSize: "18px",
+  alignItems: "center",
+  maxWidth: "400px",
+  margin: "0 auto",
+  textAlign: "center"
+};
 function ReusableForm(props) {
   const inputStyle = {
-    marginBottom: "10px" // Adjust the value as needed
+    marginBottom: "10px",
+    fontSize: "18px",
+    padding: "10px", 
+    textAlign: "center"
+  };
+
+  const buttonStyle = {
+    alignSelf: "center",  
+    marginTop: "15px",
+    marginLeft: "40px"
   };
 
   return (
     <React.Fragment>
-      <Form onSubmit={props.formSubmissionHandler}>
+      <Form style={formStyle} onSubmit={props.formSubmissionHandler}>
         <Form.Group controlId="origin">
-          <Form.Label>Origin:</Form.Label>
+          <Form.Label><b>Origin:</b></Form.Label>
           <Form.Control
             type="text"
             name="origin"
@@ -20,7 +38,7 @@ function ReusableForm(props) {
           />
         </Form.Group>
         <Form.Group controlId="name">
-          <Form.Label>Name:</Form.Label>
+          <Form.Label><b>Name:</b></Form.Label>
           <Form.Control
             type="text"
             name="name"
@@ -29,7 +47,7 @@ function ReusableForm(props) {
           />
         </Form.Group>
         <Form.Group controlId="price">
-          <Form.Label>Price:$</Form.Label>
+          <Form.Label><b>Price:$</b></Form.Label>
           <Form.Control
             type="text"
             name="price"
@@ -38,7 +56,7 @@ function ReusableForm(props) {
           />
         </Form.Group>
         <Form.Group controlId="roast">
-          <Form.Label>Roast: </Form.Label>
+          <Form.Label><b>Roast:</b></Form.Label>
           <Form.Control
             type="text"
             name="roast"
@@ -46,7 +64,7 @@ function ReusableForm(props) {
             style={inputStyle}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button style={buttonStyle} type="submit">
           {props.buttonText}
         </Button>
       </Form>
