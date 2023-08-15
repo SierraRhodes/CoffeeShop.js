@@ -64,6 +64,15 @@ function ReusableForm(props) {
             style={inputStyle}
           />
         </Form.Group>
+        <Form.Group controlId="quantity">
+          <Form.Label><b>Inventory:</b></Form.Label>
+          <Form.Control
+            type="text"
+            name="quantity"
+            placeholder="quantity"
+            style={inputStyle}
+          />
+        </Form.Group>
         <Button style={buttonStyle} type="submit">
           {props.buttonText}
         </Button>

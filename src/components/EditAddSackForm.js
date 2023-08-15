@@ -7,7 +7,7 @@ function EditAddSackForm (props) {
 
   function handleEditCoffeeItemFormSubmission(event) {
     event.preventDefault();
-    props.onEditCoffeeItem({origin: event.target.origin.value, name: event.target.name.value, price: event.target.price.value, roast: event.target.roast.value, id: coffeeItem.id});
+    props.onEditCoffeeItem({origin: event.target.origin.value, name: event.target.name.value, price: event.target.price.value, roast: event.target.roast.value, quantity: event.target.quantity.value, id: coffeeItem.id});
   }
   return (
     <React.Fragment>
