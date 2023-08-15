@@ -72,11 +72,14 @@ class StoreManagement extends React.Component {
   }
 
   handleBuyingCoffee = (coffeeItem) => {
-    coffeeItem.quantity -= 1;
-    this.setState({
-      selectedCoffeeItem: coffeeItem
-    });
-  }
+    if (coffeeItem.quantity > 0) {
+      coffeeItem.quantity -= 1;
+      this.setState({
+        selectedCoffeeItem: coffeeItem
+      });
+    }
+  };
+  
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;

@@ -12,7 +12,7 @@ function CoffeeDetails(props){
       <h3>Inventory: {coffeeItem.quantity}</h3>
       <button onClick={()=> props.onClickingEdit(coffeeItem.id)}>Update Coffee Item</button>
       <button onClick={()=> onClickingDelete (coffeeItem.id) }>Delete Coffee Item</button>
-      <button onClick={ () => onClickingSell(coffeeItem) }>Sell Coffee</button>
+      <button onClick={ () => onClickingSell(coffeeItem)}disabled={coffeeItem <= 0}>Sell Coffee</button>
       <hr/>
     </React.Fragment>
   );
