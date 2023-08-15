@@ -72,7 +72,7 @@ class StoreManagement extends React.Component {
   }
 
   handleBuyingCoffee = (coffeeItem) => {
-    coffeeItem.quantity-= 1;
+    coffeeItem.quantity -= 1;
     this.setState({
       selectedCoffeeItem: coffeeItem
     });
@@ -101,7 +101,6 @@ class StoreManagement extends React.Component {
       <React.Fragment>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
-        <button onClick={this.handleBuyingCoffee}>Sell Coffee</button>
       </React.Fragment>
     );
   }
