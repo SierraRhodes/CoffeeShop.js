@@ -7,8 +7,8 @@ function CoffeeDetails(props){
   return (
     <React.Fragment>
       <h1>Coffee Details</h1>
-      <h3>{coffeeItem.origin} - {coffeeItem.name}</h3>
-      <p><em>{coffeeItem.price} - {coffeeItem.roast}</em></p>
+      <h3><em>Origin: {coffeeItem.origin} - Name: {coffeeItem.name}</em></h3>
+      <h3><em>Price: ${coffeeItem.price} - Roast: {coffeeItem.roast}</em></h3>
       <h3>Inventory: {coffeeItem.quantity}</h3>
       <button onClick={()=> props.onClickingEdit(coffeeItem.id)}>Update Coffee Item</button>
       <button onClick={()=> onClickingDelete (coffeeItem.id) }>Delete Coffee Item</button>

@@ -13,8 +13,8 @@ import PropTypes from "prop-types";
   return (
     <React.Fragment>
       <div onClick = {() => props.whenCoffeeItemClicked(props.id)}>
-      <h3>{props.origin} - {props.name}</h3>
-      <p><em>{props.price} - {props.roast}</em></p>
+      <h3><em>Origin: {props.origin} - Name: {props.name}</em></h3>
+      <h3><em>Price: ${props.price} - Roast: {props.roast}</em></h3>
       <p>Inventory: {props.quantity}</p>
       <hr/>
       </div>
