@@ -70,7 +70,7 @@ function ReusableForm(props) {
             type="text"
             name="quantity"
             placeholder="quantity"
-            style={inputStyle}
+            style={{ ...inputStyle, marginRight: "35px" }}
           />
         </Form.Group>
         <Button style={buttonStyle} type="submit">
