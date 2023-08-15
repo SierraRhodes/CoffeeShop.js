@@ -1,6 +1,6 @@
 # _Belle's Coffee Shop_
 
-#### By _**Sierra Rhodes
+#### By _Sierra Rhodes
 
 #### This simple web application made with react that allows the user full CRUD (Create, Read, Update, Delete) functionality when creating their own coffee sack. 
 
@@ -41,7 +41,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 
 
-
+![Diagram](/images/coffeeshop.png)
 
 
 
@@ -121,3 +121,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
