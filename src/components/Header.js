@@ -11,7 +11,7 @@ function Header() {
   const headerTitleStyle = {
     fontSize: '24px',
     fontWeight: 'bold',
-    marginBottom: '10px'
+    marginBottom: '20px',
   };
 
   const headerSubtitleStyle = {

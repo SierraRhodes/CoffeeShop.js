@@ -9,6 +9,7 @@ const formStyle = {
   alignItems: "center",
   maxWidth: "400px",
   margin: "0 auto",
+  paddingTop: "20px",
   textAlign: "center"
 };
 function ReusableForm(props) {
